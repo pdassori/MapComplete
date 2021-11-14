@@ -681,7 +681,22 @@
             "nl": "Rolstoel toegankelijk",
             "de": "Rollstuhlgerecht"
           },
-          "osmTags": "wheelchair=yes"
+          "osmTags": {
+            "or": [
+              {
+                "and": [
+                  "amenity=toilets",
+                  "wheelchair=yes"
+                ]
+              },
+              {
+                "and": [
+                  "toilets=yes",
+                  "toilets:wheelchair=yes"
+                ]
+              }
+            ]
+          }
         }
       ]
     },
@@ -711,7 +726,10 @@
             "or": [
               "fee=no",
               "fee=0",
-              "charge=0"
+              "charge=0",
+              "toilets:fee=no",
+              "toilets:fee=0",
+              "toilets:charge=0"
             ]
           }
         }
@@ -754,7 +772,22 @@
         "render": "./assets/layers/toilet/toilets.svg",
         "mappings": [
           {
-            "if": "wheelchair=yes",
+            "if": {
+              "or": [
+                {
+                  "and": [
+                    "amenity=toilets",
+                    "wheelchair=yes"
+                  ]
+                },
+                {
+                  "and": [
+                    "toilets=yes",
+                    "toilets:wheelchair=yes"
+                  ]
+                }
+              ]
+            },
             "then": "circle:white;./assets/layers/toilet/wheelchair.svg"
           },
           {
