@@ -1263,11 +1263,36 @@
         },
         "question": "Есть ли свободный доступ к этим туалетам?"
       },
+      "toilet-access-prefixed": {
+        "mappings": {
+          "0": {
+            "then": "Свободный доступ"
+          },
+          "2": {
+            "then": "Недоступно"
+          },
+          "4": {
+            "then": "Свободный доступ"
+          }
+        },
+        "question": "Есть ли свободный доступ к этим туалетам?"
+      },
       "toilet-charge": {
         "question": "Сколько стоит посещение туалета?",
         "render": "Стоимость {charge}"
       },
+      "toilet-charge-prefixed": {
+        "question": "Сколько стоит посещение туалета?",
+        "render": "Стоимость {toilets:charge}"
+      },
       "toilets-fee": {
+        "mappings": {
+          "0": {
+            "then": "Это платные туалеты"
+          }
+        }
+      },
+      "toilets-fee-prefixed": {
         "mappings": {
           "0": {
             "then": "Это платные туалеты"
@@ -1278,6 +1303,13 @@
         "question": "Какие это туалеты?"
       },
       "toilets-wheelchair": {
+        "mappings": {
+          "1": {
+            "then": "Недоступно пользователям кресел-колясок"
+          }
+        }
+      },
+      "toilets-wheelchair-prefixed": {
         "mappings": {
           "1": {
             "then": "Недоступно пользователям кресел-колясок"

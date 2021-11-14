@@ -2537,6 +2537,27 @@
         "question": "Sind diese Toiletten öffentlich zugänglich?",
         "render": "Zugang ist {access}"
       },
+      "toilet-access-prefixed": {
+        "mappings": {
+          "0": {
+            "then": "Öffentlicher Zugang"
+          },
+          "1": {
+            "then": "Nur Zugang für Kunden"
+          },
+          "2": {
+            "then": "Nicht zugänglich"
+          },
+          "3": {
+            "then": "Zugänglich, aber man muss einen Schlüssel für die Eingabe verlangen"
+          },
+          "4": {
+            "then": "Öffentlicher Zugang"
+          }
+        },
+        "question": "Sind diese Toiletten öffentlich zugänglich?",
+        "render": "Zugang ist {toilets:access}"
+      },
       "toilet-changing_table:location": {
         "mappings": {
           "0": {
@@ -2558,6 +2579,10 @@
       "toilet-charge": {
         "question": "Wie viel muss man für diese Toiletten bezahlen?",
         "render": "Die Gebühr beträgt {charge}"
+      },
+      "toilet-charge-prefixed": {
+        "question": "Wie viel muss man für diese Toiletten bezahlen?",
+        "render": "Die Gebühr beträgt {toilets:charge}"
       },
       "toilet-handwashing": {
         "mappings": {
@@ -2600,6 +2625,17 @@
         },
         "question": "Können diese Toiletten kostenlos benutzt werden?"
       },
+      "toilets-fee-prefixed": {
+        "mappings": {
+          "0": {
+            "then": "Dies sind bezahlte Toiletten"
+          },
+          "1": {
+            "then": "Kostenlose Nutzung"
+          }
+        },
+        "question": "Können diese Toiletten kostenlos benutzt werden?"
+      },
       "toilets-type": {
         "mappings": {
           "0": {
@@ -2618,6 +2654,17 @@
         "question": "Welche Art von Toiletten sind das?"
       },
       "toilets-wheelchair": {
+        "mappings": {
+          "0": {
+            "then": "Es gibt eine Toilette für Rollstuhlfahrer"
+          },
+          "1": {
+            "then": "Kein Zugang für Rollstuhlfahrer"
+          }
+        },
+        "question": "Gibt es eine Toilette für Rollstuhlfahrer?"
+      },
+      "toilets-wheelchair-prefixed": {
         "mappings": {
           "0": {
             "then": "Es gibt eine Toilette für Rollstuhlfahrer"

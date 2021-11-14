@@ -10,7 +10,12 @@
   },
   "minzoom": 12,
   "source": {
-    "osmTags": "amenity=toilets"
+    "osmTags": {
+      "or": [
+        "amenity=toilets",
+        "toilets=yes"
+      ]
+    }
   },
   "title": {
     "render": {
@@ -69,6 +74,7 @@
   "tagRenderings": [
     "images",
     {
+      "condition": "amenity=toilets",
       "question": {
         "en": "Are these toilets publicly accessible?",
         "de": "Sind diese Toiletten öffentlich zugänglich?",
@@ -149,7 +155,89 @@
       "id": "toilet-access"
     },
     {
+      "condition": "toilets=yes",
+      "question": {
+        "en": "Are these toilets publicly accessible?",
+        "de": "Sind diese Toiletten öffentlich zugänglich?",
+        "fr": "Ces toilettes sont-elles accessibles au public ?",
+        "nl": "Zijn deze toiletten publiek toegankelijk?",
+        "it": "Questi servizi igienici sono aperti al pubblico?",
+        "ru": "Есть ли свободный доступ к этим туалетам?"
+      },
+      "render": {
+        "en": "Access is {toilets:access}",
+        "de": "Zugang ist {toilets:access}",
+        "fr": "L'accès est {toilets:access}",
+        "nl": "Toegankelijkheid is {toilets:access}",
+        "it": "L'accesso è {toilets:access}"
+      },
+      "freeform": {
+        "key": "toilets:access",
+        "addExtraTags": [
+          "fixme=the tag access was filled out by the user and might need refinement"
+        ]
+      },
+      "mappings": [
+        {
+          "if": "toilets:access=yes",
+          "then": {
+            "en": "Public access",
+            "de": "Öffentlicher Zugang",
+            "fr": "Accès publique",
+            "nl": "Publiek toegankelijk",
+            "it": "Accesso pubblico",
+            "ru": "Свободный доступ"
+          }
+        },
+        {
+          "if": "toilets:access=customers",
+          "then": {
+            "en": "Only access to customers",
+            "de": "Nur Zugang für Kunden",
+            "fr": "Accès réservé aux clients",
+            "nl": "Enkel toegang voor klanten",
+            "it": "Accesso riservato ai clienti e alle clienti"
+          }
+        },
+        {
+          "if": "toilets:access=no",
+          "then": {
+            "en": "Not accessible",
+            "de": "Nicht zugänglich",
+            "fr": "Toilettes privées",
+            "nl": "Niet toegankelijk",
+            "ru": "Недоступно",
+            "it": "Non accessibile"
+          }
+        },
+        {
+          "if": "toilets:access=key",
+          "then": {
+            "en": "Accessible, but one has to ask a key to enter",
+            "de": "Zugänglich, aber man muss einen Schlüssel für die Eingabe verlangen",
+            "fr": "Accessible, mais vous devez demander la clé",
+            "nl": "Toegankelijk na het vragen van de sleutel",
+            "it": "Accessibile, ma occorre chiedere una chiave per accedere"
+          }
+        },
+        {
+          "if": "toilets:access=public",
+          "then": {
+            "en": "Public access",
+            "de": "Öffentlicher Zugang",
+            "fr": "Accès publique",
+            "nl": "Publiek toegankelijk",
+            "it": "Accesso pubblico",
+            "ru": "Свободный доступ"
+          },
+          "hideInAnswer": true
+        }
+      ],
+      "id": "toilet-access-prefixed"
+    },
+    {
       "id": "toilets-fee",
+      "condition": "amenity=toilets",
       "question": {
         "en": "Are these toilets free to use?",
         "de": "Können diese Toiletten kostenlos benutzt werden?",
@@ -171,6 +259,40 @@
         },
         {
           "if": "fee=no",
+          "then": {
+            "en": "Free to use",
+            "de": "Kostenlose Nutzung",
+            "fr": "Toilettes gratuites",
+            "nl": "Gratis te gebruiken",
+            "it": "Gratis"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toilets-fee-prefixed",
+      "condition": "toilets=yes",
+      "question": {
+        "en": "Are these toilets free to use?",
+        "de": "Können diese Toiletten kostenlos benutzt werden?",
+        "fr": "Ces toilettes sont-elles payantes ?",
+        "nl": "Zijn deze toiletten gratis te gebruiken?",
+        "it": "Questi servizi igienici sono gratuiti?"
+      },
+      "mappings": [
+        {
+          "then": {
+            "en": "These are paid toilets",
+            "de": "Dies sind bezahlte Toiletten",
+            "fr": "Toilettes payantes",
+            "nl": "Men moet betalen om deze toiletten te gebruiken",
+            "ru": "Это платные туалеты",
+            "it": "Questi servizi igienici sono a pagamento"
+          },
+          "if": "toilets:fee=yes"
+        },
+        {
+          "if": "toilets:fee=no",
           "then": {
             "en": "Free to use",
             "de": "Kostenlose Nutzung",
@@ -206,6 +328,30 @@
       "id": "toilet-charge"
     },
     {
+      "question": {
+        "en": "How much does one have to pay for these toilets?",
+        "de": "Wie viel muss man für diese Toiletten bezahlen?",
+        "fr": "Quel est le prix d'accès de ces toilettes ?",
+        "nl": "Hoeveel moet men betalen om deze toiletten te gebruiken?",
+        "it": "Quanto costa l'accesso a questi servizi igienici?",
+        "ru": "Сколько стоит посещение туалета?"
+      },
+      "render": {
+        "en": "The fee is {toilets:charge}",
+        "de": "Die Gebühr beträgt {toilets:charge}",
+        "fr": "Le prix est {toilets:charge}",
+        "nl": "De toiletten gebruiken kost {toilets:charge}",
+        "it": "La tariffa è {toilets:charge}",
+        "ru": "Стоимость {toilets:charge}"
+      },
+      "condition": "toilets:fee=yes",
+      "freeform": {
+        "key": "toilets:charge",
+        "type": "string"
+      },
+      "id": "toilet-charge-prefixed"
+    },
+    {
       "builtin": "payment-options",
       "override": {
         "condition": "fee=yes"
@@ -213,6 +359,7 @@
     },
     {
       "id": "Opening-hours",
+      "condition": "amenity=toilets",
       "question": {
         "en": "When are these toilets opened?",
         "nl": "Wanneer zijn deze toiletten open?"
@@ -234,6 +381,7 @@
     },
     {
       "id": "toilets-wheelchair",
+      "condition": "amenity=toilets",
       "question": {
         "en": "Is there a dedicated toilet for wheelchair users",
         "de": "Gibt es eine Toilette für Rollstuhlfahrer?",
@@ -254,6 +402,40 @@
         },
         {
           "if": "wheelchair=no",
+          "then": {
+            "en": "No wheelchair access",
+            "de": "Kein Zugang für Rollstuhlfahrer",
+            "fr": "Non accessible aux personnes à mobilité réduite",
+            "nl": "Niet toegankelijk voor rolstoelgebruikers",
+            "it": "Non accessibile in sedia a rotelle",
+            "ru": "Недоступно пользователям кресел-колясок"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toilets-wheelchair-prefixed",
+      "condition": "toilets=yes",
+      "question": {
+        "en": "Is there a dedicated toilet for wheelchair users",
+        "de": "Gibt es eine Toilette für Rollstuhlfahrer?",
+        "fr": "Y a-t-il des toilettes réservées aux personnes en fauteuil roulant ?",
+        "nl": "Is er een rolstoeltoegankelijke toilet voorzien?",
+        "it": "C'è un WC riservato alle persone in sedia a rotelle"
+      },
+      "mappings": [
+        {
+          "then": {
+            "en": "There is a dedicated toilet for wheelchair users",
+            "de": "Es gibt eine Toilette für Rollstuhlfahrer",
+            "fr": "Il y a des toilettes réservées pour les personnes à mobilité réduite",
+            "nl": "Er is een toilet voor rolstoelgebruikers",
+            "it": "C'è un WC riservato alle persone in sedia a rotelle"
+          },
+          "if": "toilets:wheelchair=yes"
+        },
+        {
+          "if": "toilets:wheelchair=no",
           "then": {
             "en": "No wheelchair access",
             "de": "Kein Zugang für Rollstuhlfahrer",
@@ -470,8 +652,24 @@
         ]
       }
     },
-"level",
-"description"
+    "level",
+    {
+      "builtin": "description",
+      "override": {
+        "condition": "amenity=toilets"
+      }
+    },
+    {
+      "builtin": "description",
+      "override": {
+        "id": "description-prefixed",
+        "condition": "toilets=yes",
+        "render": "{toilets:description}",
+        "freeform": {
+          "key": "toilets:description"
+        }
+      }
+    }
   ],
   "filter": [
     {

@@ -3817,6 +3817,27 @@
         "question": "Are these toilets publicly accessible?",
         "render": "Access is {access}"
       },
+      "toilet-access-prefixed": {
+        "mappings": {
+          "0": {
+            "then": "Public access"
+          },
+          "1": {
+            "then": "Only access to customers"
+          },
+          "2": {
+            "then": "Not accessible"
+          },
+          "3": {
+            "then": "Accessible, but one has to ask a key to enter"
+          },
+          "4": {
+            "then": "Public access"
+          }
+        },
+        "question": "Are these toilets publicly accessible?",
+        "render": "Access is {toilets:access}"
+      },
       "toilet-changing_table:location": {
         "mappings": {
           "0": {
@@ -3838,6 +3859,10 @@
       "toilet-charge": {
         "question": "How much does one have to pay for these toilets?",
         "render": "The fee is {charge}"
+      },
+      "toilet-charge-prefixed": {
+        "question": "How much does one have to pay for these toilets?",
+        "render": "The fee is {toilets:charge}"
       },
       "toilet-handwashing": {
         "mappings": {
@@ -3883,6 +3908,17 @@
         },
         "question": "Are these toilets free to use?"
       },
+      "toilets-fee-prefixed": {
+        "mappings": {
+          "0": {
+            "then": "These are paid toilets"
+          },
+          "1": {
+            "then": "Free to use"
+          }
+        },
+        "question": "Are these toilets free to use?"
+      },
       "toilets-type": {
         "mappings": {
           "0": {
@@ -3901,6 +3937,17 @@
         "question": "Which kind of toilets are this?"
       },
       "toilets-wheelchair": {
+        "mappings": {
+          "0": {
+            "then": "There is a dedicated toilet for wheelchair users"
+          },
+          "1": {
+            "then": "No wheelchair access"
+          }
+        },
+        "question": "Is there a dedicated toilet for wheelchair users"
+      },
+      "toilets-wheelchair-prefixed": {
         "mappings": {
           "0": {
             "then": "There is a dedicated toilet for wheelchair users"

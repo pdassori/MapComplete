@@ -1715,6 +1715,27 @@
         "question": "Ces toilettes sont-elles accessibles au public ?",
         "render": "L'accès est {access}"
       },
+      "toilet-access-prefixed": {
+        "mappings": {
+          "0": {
+            "then": "Accès publique"
+          },
+          "1": {
+            "then": "Accès réservé aux clients"
+          },
+          "2": {
+            "then": "Toilettes privées"
+          },
+          "3": {
+            "then": "Accessible, mais vous devez demander la clé"
+          },
+          "4": {
+            "then": "Accès publique"
+          }
+        },
+        "question": "Ces toilettes sont-elles accessibles au public ?",
+        "render": "L'accès est {toilets:access}"
+      },
       "toilet-changing_table:location": {
         "mappings": {
           "0": {
@@ -1737,6 +1758,10 @@
         "question": "Quel est le prix d'accès de ces toilettes ?",
         "render": "Le prix est {charge}"
       },
+      "toilet-charge-prefixed": {
+        "question": "Quel est le prix d'accès de ces toilettes ?",
+        "render": "Le prix est {toilets:charge}"
+      },
       "toilets-changing-table": {
         "mappings": {
           "0": {
@@ -1749,6 +1774,17 @@
         "question": "Ces toilettes disposent-elles d'une table à langer ?"
       },
       "toilets-fee": {
+        "mappings": {
+          "0": {
+            "then": "Toilettes payantes"
+          },
+          "1": {
+            "then": "Toilettes gratuites"
+          }
+        },
+        "question": "Ces toilettes sont-elles payantes ?"
+      },
+      "toilets-fee-prefixed": {
         "mappings": {
           "0": {
             "then": "Toilettes payantes"
@@ -1777,6 +1813,17 @@
         "question": "De quel type sont ces toilettes ?"
       },
       "toilets-wheelchair": {
+        "mappings": {
+          "0": {
+            "then": "Il y a des toilettes réservées pour les personnes à mobilité réduite"
+          },
+          "1": {
+            "then": "Non accessible aux personnes à mobilité réduite"
+          }
+        },
+        "question": "Y a-t-il des toilettes réservées aux personnes en fauteuil roulant ?"
+      },
+      "toilets-wheelchair-prefixed": {
         "mappings": {
           "0": {
             "then": "Il y a des toilettes réservées pour les personnes à mobilité réduite"

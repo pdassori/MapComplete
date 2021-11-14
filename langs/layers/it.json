@@ -1600,6 +1600,27 @@
         "question": "Questi servizi igienici sono aperti al pubblico?",
         "render": "L'accesso è {access}"
       },
+      "toilet-access-prefixed": {
+        "mappings": {
+          "0": {
+            "then": "Accesso pubblico"
+          },
+          "1": {
+            "then": "Accesso riservato ai clienti e alle clienti"
+          },
+          "2": {
+            "then": "Non accessibile"
+          },
+          "3": {
+            "then": "Accessibile, ma occorre chiedere una chiave per accedere"
+          },
+          "4": {
+            "then": "Accesso pubblico"
+          }
+        },
+        "question": "Questi servizi igienici sono aperti al pubblico?",
+        "render": "L'accesso è {toilets:access}"
+      },
       "toilet-changing_table:location": {
         "mappings": {
           "0": {
@@ -1622,6 +1643,10 @@
         "question": "Quanto costa l'accesso a questi servizi igienici?",
         "render": "La tariffa è {charge}"
       },
+      "toilet-charge-prefixed": {
+        "question": "Quanto costa l'accesso a questi servizi igienici?",
+        "render": "La tariffa è {toilets:charge}"
+      },
       "toilets-changing-table": {
         "mappings": {
           "0": {
@@ -1634,6 +1659,17 @@
         "question": "È disponibile un fasciatoio (per cambiare i pannolini)?"
       },
       "toilets-fee": {
+        "mappings": {
+          "0": {
+            "then": "Questi servizi igienici sono a pagamento"
+          },
+          "1": {
+            "then": "Gratis"
+          }
+        },
+        "question": "Questi servizi igienici sono gratuiti?"
+      },
+      "toilets-fee-prefixed": {
         "mappings": {
           "0": {
             "then": "Questi servizi igienici sono a pagamento"
@@ -1662,6 +1698,17 @@
         "question": "Di che tipo di servizi igienici si tratta?"
       },
       "toilets-wheelchair": {
+        "mappings": {
+          "0": {
+            "then": "C'è un WC riservato alle persone in sedia a rotelle"
+          },
+          "1": {
+            "then": "Non accessibile in sedia a rotelle"
+          }
+        },
+        "question": "C'è un WC riservato alle persone in sedia a rotelle"
+      },
+      "toilets-wheelchair-prefixed": {
         "mappings": {
           "0": {
             "then": "C'è un WC riservato alle persone in sedia a rotelle"

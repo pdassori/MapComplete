@@ -4127,6 +4127,27 @@
         "question": "Zijn deze toiletten publiek toegankelijk?",
         "render": "Toegankelijkheid is {access}"
       },
+      "toilet-access-prefixed": {
+        "mappings": {
+          "0": {
+            "then": "Publiek toegankelijk"
+          },
+          "1": {
+            "then": "Enkel toegang voor klanten"
+          },
+          "2": {
+            "then": "Niet toegankelijk"
+          },
+          "3": {
+            "then": "Toegankelijk na het vragen van de sleutel"
+          },
+          "4": {
+            "then": "Publiek toegankelijk"
+          }
+        },
+        "question": "Zijn deze toiletten publiek toegankelijk?",
+        "render": "Toegankelijkheid is {toilets:access}"
+      },
       "toilet-changing_table:location": {
         "mappings": {
           "0": {
@@ -4148,6 +4169,10 @@
       "toilet-charge": {
         "question": "Hoeveel moet men betalen om deze toiletten te gebruiken?",
         "render": "De toiletten gebruiken kost {charge}"
+      },
+      "toilet-charge-prefixed": {
+        "question": "Hoeveel moet men betalen om deze toiletten te gebruiken?",
+        "render": "De toiletten gebruiken kost {toilets:charge}"
       },
       "toilet-handwashing": {
         "mappings": {
@@ -4193,6 +4218,17 @@
         },
         "question": "Zijn deze toiletten gratis te gebruiken?"
       },
+      "toilets-fee-prefixed": {
+        "mappings": {
+          "0": {
+            "then": "Men moet betalen om deze toiletten te gebruiken"
+          },
+          "1": {
+            "then": "Gratis te gebruiken"
+          }
+        },
+        "question": "Zijn deze toiletten gratis te gebruiken?"
+      },
       "toilets-type": {
         "mappings": {
           "0": {
@@ -4211,6 +4247,17 @@
         "question": "Welke toiletten zijn dit?"
       },
       "toilets-wheelchair": {
+        "mappings": {
+          "0": {
+            "then": "Er is een toilet voor rolstoelgebruikers"
+          },
+          "1": {
+            "then": "Niet toegankelijk voor rolstoelgebruikers"
+          }
+        },
+        "question": "Is er een rolstoeltoegankelijke toilet voorzien?"
+      },
+      "toilets-wheelchair-prefixed": {
         "mappings": {
           "0": {
             "then": "Er is een toilet voor rolstoelgebruikers"
