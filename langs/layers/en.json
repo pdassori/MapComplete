@@ -3960,7 +3960,7 @@
       }
     },
     "title": {
-      "mapppings": {
+      "mappings": {
         "0": {
           "then": "Toilet at {name}"
         }

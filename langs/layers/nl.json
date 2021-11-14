@@ -4270,7 +4270,7 @@
       }
     },
     "title": {
-      "mapppings": {
+      "mappings": {
         "0": {
           "then": "Toilet bij {name}"
         }
