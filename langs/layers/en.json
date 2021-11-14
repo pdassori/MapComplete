@@ -3960,6 +3960,11 @@
       }
     },
     "title": {
+      "mapppings": {
+        "0": {
+          "then": "Toilet at {name}"
+        }
+      },
       "render": "Toilet"
     }
   },

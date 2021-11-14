@@ -25,7 +25,21 @@
       "nl": "Toilet",
       "ru": "Туалет",
       "it": "Servizi igienici"
-    }
+    },
+    "mapppings": [
+      {
+        "if": {
+          "and": [
+            "name~*",
+            "toilets=yes"
+          ]
+        },
+        "then": {
+          "en": "Toilet at {name}",
+          "nl": "Toilet bij {name}"
+        }
+      }
+    ]
   },
   "presets": [
     {

@@ -4270,6 +4270,11 @@
       }
     },
     "title": {
+      "mapppings": {
+        "0": {
+          "then": "Toilet bij {name}"
+        }
+      },
       "render": "Toilet"
     }
   },
