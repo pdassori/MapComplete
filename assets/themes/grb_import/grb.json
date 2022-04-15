@@ -18,7 +18,7 @@
   "startLat": 51.0249,
   "startLon": 4.026489,
   "startZoom": 9,
-  "widenFactor": 2,
+  "widenFactor": 1.1,
   "clustering": {
     "maxZoom": 15
   },
@@ -731,6 +731,6 @@
   ],
   "hideFromOverview": true,
   "defaultBackgroundId": "AGIVFlandersGRB",
-  "overpassMaxZoom": 17,
+  "overpassMaxZoom": 16,
   "osmApiTileSize": 17
 }
