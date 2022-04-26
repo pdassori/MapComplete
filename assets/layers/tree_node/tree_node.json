@@ -362,7 +362,7 @@
         "id": "Nama: {name}",
         "de": "Name: {name}",
         "eo": "Nomo: {name}",
-        "es": "Nombre: {name}
+        "es": "Nombre: {name}"
       },
       "question": {
         "nl": "Heeft de boom een naam?",
@@ -525,7 +525,7 @@
         "it": "Qual è l’ID rilasciato da Onroerend Erfgoed Flanders?",
         "fr": "Quel est son identifiant donné par Onroerend Erfgoed Flanders?",
         "de": "Wie lautet die Kennung der Onroerend Erfgoed Flanders?",
-        "es": "¿Cuál es el ID emitido por Onroerend Erfgoed Flanders?
+        "es": "¿Cuál es el ID emitido por Onroerend Erfgoed Flanders?"
       },
       "freeform": {
         "key": "ref:OnroerendErfgoed",
@@ -610,7 +610,7 @@
         "it": "Un albero di una specie con foglie larghe come la quercia o il pioppo.",
         "fr": "Un arbre d'une espèce avec de larges feuilles, comme le chêne ou le peuplier.",
         "de": "Ein Baum mit Blättern, z. B. Eiche oder Buche.",
-        "es": "Una especies de árbol con hojas, como el roble o el álamo.
+        "es": "Una especies de árbol con hojas, como el roble o el álamo."
       },
       "preciseInput": {
         "preferredBackground": "photo"
