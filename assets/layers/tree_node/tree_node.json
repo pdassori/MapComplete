@@ -79,12 +79,12 @@
     {
       "id": "tree-leaf_type",
       "question": {
-        "nl": "Is dit een naald- of loofboom?",
-        "en": "Is this a broadleaved or needleleaved tree?",
-        "it": "Si tratta di un albero latifoglia o aghifoglia?",
-        "fr": "Cet arbre est-il un feuillu ou un résineux ?",
-        "de": "Ist dies ein Laub- oder Nadelbaum?",
-        "es": "¿Es un árbol de hoja ancha o de hoja aguja?"
+        "nl": "Is dit een naald- of loofboom, of oalmboom?",
+        "en": "Is this a broadleaved, needleleaved tree or palm?",
+        "it": "Si tratta di un albero latifoglia, aghifoglia o palma?",
+        "fr": "Cet arbre est-il un feuillu, un résineux ou palmier?",
+        "de": "Ist dies ein Laubbaum, Nadelbaum oder palme?",
+        "es": "¿Es un árbol de hoja ancha, de hoja aguja o palmera?"
       },
       "mappings": [
         {
@@ -124,6 +124,26 @@
           },
           "icon": {
             "path": "./assets/themes/trees/needleleaved.svg",
+            "class": "small"
+          }
+        },
+        {
+          "if": {
+            "and": [
+              "leaf_type=palm"
+            ]
+          },
+          "then": {
+            "nl": "Palmboom",
+            "en": "Palm",
+            "it": "Palma",
+            "fr": "Palmier",
+            "de": "Palme",
+            "ca": "Palma",
+            "es": "Palmera"
+          },
+          "icon": {
+            "path": "./assets/themes/trees/palm.svg",
             "class": "small"
           }
         },
