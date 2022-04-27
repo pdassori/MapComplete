@@ -699,6 +699,14 @@
               ]
             },
             "then": "circle:#ffffff;./assets/themes/trees/needleleaved.svg"
+          },
+          {
+            "if": {
+              "and": [
+                "leaf_type=palm"
+              ]
+            },
+            "then": "circle:#ffffff;./assets/themes/trees/palm.svg"
           }
         ]
       },
