@@ -140,7 +140,7 @@
             "fr": "Palmier",
             "de": "Palme",
             "ca": "Palma",
-            "es": "Palmera"
+            "es": "Palma"
           },
           "icon": {
             "path": "./assets/themes/trees/palm.svg",
@@ -237,7 +237,7 @@
             "it": "L’albero è in un parco o qualcosa di simile (cimitero, aree didattiche, etc.).",
             "fr": "Cet arbre est dans un parc ou une aire similaire (ex : cimetière, cour d’école, …).",
             "de": "Der Baum steht in einem Park oder ähnlichem (Friedhof, Schulgelände, …).",
-            "es": "El árbol está en un parque o similar (cementerio, recinto escolar, …)."
+            "es": "El árbol está al interior de un parque o similar (cementerio, recinto escolar, …)."
           }
         },
         {
@@ -699,6 +699,14 @@
               ]
             },
             "then": "circle:#ffffff;./assets/themes/trees/needleleaved.svg"
+          },
+          {
+            "if": {
+              "and": [
+                "leaf_type=palm"
+              ]
+            },
+            "then": "circle:#ffffff;./assets/themes/trees/palm.svg"
           }
         ]
       },
